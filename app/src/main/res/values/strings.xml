@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Jurang</string>
+    <string name="title_sale">Sale</string>
+    <string name="title_stock">Stock</string>
+    <string name="title_profile">Profile</string>
+    <string name="add_scan">Scan</string>
+    <string name="add_manual">Manual</string>
+
+</resources>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.SaleFragment">
+
+    <ListView
+        android:id="@+id/listSale"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/linear" />
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/linear"
+        android:layout_alignParentEnd="true"
+        app:menu_backgroundColor="@android:color/transparent"
+        app:menu_colorNormal="@color/colorPrimaryDark"
+        app:menu_colorPressed="@color/colorPrimaryDark"
+        app:menu_fab_hide_animation="@anim/fab_scale_down"
+        app:menu_fab_size="normal"
+        app:menu_labels_showAnimation="@anim/fab_scale_up"
+        app:menu_openDirection="up"
+        app:menu_showShadow="true">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fabScan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_search_white_24dp"
+            app:fab_colorNormal="@color/colorPrimary"
+            app:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fabManual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_keyboard_return_white_24dp"
+            app:fab_colorNormal="@color/colorPrimary"
+            app:fab_size="mini" />
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txtTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="Rp.60000"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnBayar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:text="Bayar" />
+
+    </LinearLayout>
+
+</RelativeLayout>
