@@ -20,9 +20,9 @@ import android.widget.Toast;
 import com.example.asus.jurang.Const;
 import com.example.asus.jurang.R;
 import com.example.asus.jurang.helper.api.RetrofitClient;
-import com.example.asus.jurang.helper.model.AddBarangResponse;
-import com.example.asus.jurang.helper.model.GetBarangItem;
-import com.example.asus.jurang.helper.model.GetBarangResponse;
+import com.example.asus.jurang.helper.model.server.AddBarangResponse;
+import com.example.asus.jurang.helper.model.server.GetBarangItem;
+import com.example.asus.jurang.helper.model.server.GetBarangResponse;
 import com.example.asus.jurang.helper.service.DataService;
 import com.example.asus.jurang.ui.adapter.RecyclerStokAdapter;
 import com.example.asus.jurang.ui.sell.ScanBarangActivity;
@@ -92,7 +92,7 @@ public class StockFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getContext(), ScanBarangActivity.class);
-                i.putExtra(Const.scan_barang_key, Const.add_barang_action_code);
+                i.putExtra(Const.scan_barang_key, Const.add_barang_manual_action_code);
                 startActivity(i);
             }
         });

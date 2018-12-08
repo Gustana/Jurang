@@ -1,4 +1,4 @@
-package com.example.asus.jurang.helper.model;
+package com.example.asus.jurang.helper.model.server;
 
 import java.util.List;
 

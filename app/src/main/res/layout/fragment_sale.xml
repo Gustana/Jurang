@@ -6,10 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".ui.fragment.SaleFragment">
 
-    <ListView
-        android:id="@+id/listSale"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvListSale"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_above="@id/linear" />
 
     <com.github.clans.fab.FloatingActionMenu
@@ -68,11 +68,19 @@
                 android:textSize="16sp" />
 
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:layout_toStartOf="@id/txtTotal"
+                android:text="Rp. "/>
+
+            <TextView
                 android:id="@+id/txtTotal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-                android:text="Rp.60000"
+                tools:text="60000"
                 android:textColor="@android:color/black"
                 android:textSize="16sp" />
 

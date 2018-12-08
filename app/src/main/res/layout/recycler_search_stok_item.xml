@@ -72,7 +72,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@android:color/black"
-                    tools:text=" Item(s) Left" />
+                    android:text=" Item(s) Left" />
 
             </LinearLayout>
 

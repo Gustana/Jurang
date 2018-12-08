@@ -9,8 +9,8 @@ import android.util.Log;
 
 import com.example.asus.jurang.R;
 import com.example.asus.jurang.helper.api.RetrofitClient;
-import com.example.asus.jurang.helper.model.GetBarangItem;
-import com.example.asus.jurang.helper.model.GetBarangResponse;
+import com.example.asus.jurang.helper.model.server.GetBarangItem;
+import com.example.asus.jurang.helper.model.server.GetBarangResponse;
 import com.example.asus.jurang.helper.service.DataService;
 import com.example.asus.jurang.ui.adapter.RecyclerSearchStockAdapter;
 
@@ -21,9 +21,9 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class SearchManaualBarangActivity extends AppCompatActivity {
+public class SearchManualBarangActivity extends AppCompatActivity {
 
-    private static final String TAG = SearchManaualBarangActivity.class.getSimpleName();
+    private static final String TAG = SearchManualBarangActivity.class.getSimpleName();
 
     private RecyclerView rvListBarang;
     private List<GetBarangItem> getBarangItemList;
@@ -33,7 +33,7 @@ public class SearchManaualBarangActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_search_manaual_barang);
+        setContentView(R.layout.activity_search_manual_barang);
 
         getBarangItemList = new ArrayList<>();
         linearLayoutManager = new LinearLayoutManager(this);
@@ -53,7 +53,7 @@ public class SearchManaualBarangActivity extends AppCompatActivity {
                 Log.i(TAG, "onResponse: " + response.body());
                 if (response.isSuccessful() && response.body() != null) {
                     getBarangItemList = response.body().getMessage();
-                    recyclerSearchStockAdapter = new RecyclerSearchStockAdapter(getBarangItemList);
+                    recyclerSearchStockAdapter = new RecyclerSearchStockAdapter(SearchManualBarangActivity.this, getBarangItemList);
                     rvListBarang.setAdapter(recyclerSearchStockAdapter);
                 }
             }

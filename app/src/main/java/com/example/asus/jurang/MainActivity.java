@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         loadFragment(new SaleFragment());
 
         navigation.setOnNavigationItemSelectedListener(this);
+
     }
 
     @Override

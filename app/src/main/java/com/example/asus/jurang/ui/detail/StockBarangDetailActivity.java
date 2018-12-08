@@ -17,7 +17,7 @@ import android.widget.Toast;
 import com.example.asus.jurang.Const;
 import com.example.asus.jurang.R;
 import com.example.asus.jurang.helper.api.RetrofitClient;
-import com.example.asus.jurang.helper.model.AddBarangResponse;
+import com.example.asus.jurang.helper.model.server.AddBarangResponse;
 import com.example.asus.jurang.helper.service.DataService;
 
 import retrofit2.Call;

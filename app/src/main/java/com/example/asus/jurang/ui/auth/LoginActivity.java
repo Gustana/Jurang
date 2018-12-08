@@ -14,7 +14,7 @@ import com.example.asus.jurang.Const;
 import com.example.asus.jurang.MainActivity;
 import com.example.asus.jurang.R;
 import com.example.asus.jurang.helper.api.RetrofitClient;
-import com.example.asus.jurang.helper.model.LoginResponse;
+import com.example.asus.jurang.helper.model.server.LoginResponse;
 import com.example.asus.jurang.helper.service.DataService;
 import com.example.asus.jurang.manager.SPManager;
 

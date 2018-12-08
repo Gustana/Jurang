@@ -13,7 +13,7 @@ import android.widget.Toast;
 import com.example.asus.jurang.Const;
 import com.example.asus.jurang.R;
 import com.example.asus.jurang.helper.api.RetrofitClient;
-import com.example.asus.jurang.helper.model.AddBarangResponse;
+import com.example.asus.jurang.helper.model.server.AddBarangResponse;
 import com.example.asus.jurang.helper.service.DataService;
 import com.google.zxing.Result;
 
@@ -62,7 +62,7 @@ public class ScanBarangActivity extends Activity implements ZXingScannerView.Res
     @Override
     public void handleResult(Result result) {
          scan_result_barang = result.getText();
-         if (scan_barang_action_code == Const.add_barang_action_code){
+         if (scan_barang_action_code == Const.add_barang_manual_action_code){
              Dialog dialog = new Dialog(ScanBarangActivity.this);
              dialog.setContentView(R.layout.dialog_add_barang);
 
@@ -73,7 +73,8 @@ public class ScanBarangActivity extends Activity implements ZXingScannerView.Res
              edtKodeBarang.setEnabled(false);
 
              onButtonKirimBarangClicked(dialog);
-         }else{
+
+         }else if (scan_barang_action_code == Const.add_barang_scan_action_code){
 
          }
     }

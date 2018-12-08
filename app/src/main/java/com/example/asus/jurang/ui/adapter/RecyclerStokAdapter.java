@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import com.example.asus.jurang.Const;
 import com.example.asus.jurang.R;
-import com.example.asus.jurang.helper.model.GetBarangItem;
+import com.example.asus.jurang.helper.model.server.GetBarangItem;
 import com.example.asus.jurang.ui.detail.StockBarangDetailActivity;
 
 import java.util.List;

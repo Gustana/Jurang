@@ -11,10 +11,9 @@ import android.widget.Toast;
 
 import com.example.asus.jurang.R;
 import com.example.asus.jurang.helper.api.RetrofitClient;
-import com.example.asus.jurang.helper.model.RegisterResponse;
+import com.example.asus.jurang.helper.model.server.RegisterResponse;
 import com.example.asus.jurang.helper.service.DataService;
 
-import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

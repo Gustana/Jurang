@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Pick your action"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+
+    <RadioGroup
+        android:id="@+id/rgUpdateItemQuantity"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_height="wrap_content">
+
+
+        <RadioButton
+            android:id="@+id/rbUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="'Change Quantity" />
+
+        <EditText
+            android:id="@+id/edtItemQuantityUpdate"
+            android:layout_width="140dp"
+            android:inputType="number"
+            android:layout_height="35dp" />
+
+        <RadioButton
+            android:id="@+id/rbDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete Item" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnUpdateItemQuantity"
+        android:layout_width="match_parent"
+        android:layout_marginTop="16dp"
+        android:text="Execute"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

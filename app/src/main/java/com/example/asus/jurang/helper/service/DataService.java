@@ -1,9 +1,13 @@
 package com.example.asus.jurang.helper.service;
 
-import com.example.asus.jurang.helper.model.AddBarangResponse;
-import com.example.asus.jurang.helper.model.GetBarangResponse;
-import com.example.asus.jurang.helper.model.LoginResponse;
-import com.example.asus.jurang.helper.model.RegisterResponse;
+import com.example.asus.jurang.helper.db.model.ItemSellTableModel;
+import com.example.asus.jurang.helper.model.server.AddBarangResponse;
+import com.example.asus.jurang.helper.model.server.GetBarangResponse;
+import com.example.asus.jurang.helper.model.server.LoginResponse;
+import com.example.asus.jurang.helper.model.server.RegisterResponse;
+import com.example.asus.jurang.helper.model.server.SendImageResponse;
+
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.Field;
@@ -46,9 +50,23 @@ public interface DataService {
     );
 
     @FormUrlEncoded
+    @POST("stock/updateQuantityStock.php")
+    Call<AddBarangResponse> updateQuantityBarang(
+            @Field("itemCode") String itemCode,
+            @Field("itemStockLeft") int itemStockLeft
+    );
+
+    @FormUrlEncoded
     @POST("stock/deleteStock.php")
     Call<AddBarangResponse> deleteDataBarang(
             @Field("kodeBarang") String kodeBarang
+    );
+
+    @FormUrlEncoded
+    @POST("profile/uploadImage.php")
+    Call<SendImageResponse> sendImage(
+            @Field("email") String email,
+            @Field("image") String image
     );
 
     @GET("stock/getStock.php")
